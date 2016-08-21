@@ -14,7 +14,7 @@ apply plugin: 'idea'
 
 ext {
     name = 'Eureka Server'
-    description = 'Eureka Server demo project' 
+    description = 'Eureka Server demo project'
     version='0.0.1-SNAPSHOT'
     sourceEncoding='UTF-8'
 }
@@ -28,13 +28,15 @@ repositories {
 }
 
 dependencyManagement {
-	imports { 
+	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.BUILD-SNAPSHOT"
 	}
 }
 
 dependencies {
     compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
+
+    compile "com.github.vanroy:spring-cloud-dashboard:1.1.0.RELEASE"
 
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile "junit:junit"
